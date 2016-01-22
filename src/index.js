@@ -8,7 +8,7 @@ const NetworkListener = Provider => React.createClass({
       window.addEventListener('offline', this._onlineListener)
     }
   },
-  componentDidUnmount () {
+  componentWillUnmount () {
     if (window && window.removeEventListener) {
       window.removeEventListener('online', this._onlineListener)
       window.removeEventListener('offline', this._onlineListener)
