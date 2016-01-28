@@ -5,13 +5,13 @@ const NetworkListener = Provider => React.createClass({
   componentDidMount () {
     if (window && window.addEventListener) {
       window.addEventListener('online', this._onlineListener)
-      window.addEventListener('offline', this._onlineListener)
+      window.addEventListener('offline', this._offlineListener)
     }
   },
   componentWillUnmount () {
     if (window && window.removeEventListener) {
       window.removeEventListener('online', this._onlineListener)
-      window.removeEventListener('offline', this._onlineListener)
+      window.removeEventListener('offline', this._offlineListener)
     }
   },
   render () {

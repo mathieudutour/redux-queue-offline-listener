@@ -1,6 +1,6 @@
 {
   "name": "redux-queue-offline-listener",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Network listener for redux-queue-offline",
   "keywords": [],
   "main": "lib/index.js",
