@@ -2,6 +2,7 @@ import React from 'react'
 import { ONLINE, OFFLINE } from 'redux-queue-offline'
 
 const NetworkListener = Provider => React.createClass({
+  displayName: 'NetworkListener',
   componentDidMount () {
     if (window && window.addEventListener) {
       window.addEventListener('online', this._onlineListener)
