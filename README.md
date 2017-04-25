@@ -20,6 +20,23 @@ ReactDOM.render(
 )
 ```
 
+## React Native
+
+You can use `redux-queue-offline-listener/native` to use React Native [NetInfo](https://facebook.github.io/react-native/docs/netinfo.html)
+
+```js
+import NetworkListener from 'redux-queue-offline-listener/native';
+import { Provider } from 'react-redux';
+
+const NetworkListenerProvider = NetworkListener(Provider);
+
+AppRegistry.registerComponent('HelloWorldApp', () =>
+  <NetworkListenerProvider store={store}>
+    <MyRootComponent />
+  </NetworkListenerProvider>
+)
+```
+
 ## License
 
   MIT
