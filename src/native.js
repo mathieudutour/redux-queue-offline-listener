@@ -1,15 +1,15 @@
 import React from 'react'
-import { AppState, NetInfo } from 'react-native'
+import { NetInfo } from 'react-native'
 import { ONLINE, OFFLINE } from 'redux-queue-offline'
 
 const NetworkListener = Provider => React.createClass({
   displayName: 'NetworkListener',
   _wasOnline: undefined,
   componentDidMount () {
-    AppState.addEventListener('change', this._changeListener)
+    NetInfo.isConnected.addEventListener('change', this._changeListener)
   },
   componentWillUnmount () {
-    AppState.removeEventListener('change', this._changeListener)
+    NetInfo.isConnected.removeEventListener('change', this._changeListener)
   },
   render () {
     return <Provider {...this.props} />
