@@ -5,7 +5,8 @@
   "keywords": [],
   "main": "lib/web.js",
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "peerDependencies": {
     "react": ">=0.11.0",
