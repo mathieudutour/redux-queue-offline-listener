@@ -14,15 +14,13 @@ const NetworkListener = Provider => React.createClass({
   render () {
     return <Provider {...this.props} />
   },
-  _changeListener () {
-    NetInfo.isConnected.fetch().then((isConnected) => {
-      if (this._wasOnline !== isConnected) {
-        this._wasOnline = isConnected
-        this.props.store.dispatch({
-          type: isConnected ? ONLINE : OFFLINE
-        })
-      }
-    })
+  _changeListener (isConnected) {
+    if (this._wasOnline !== isConnected) {
+      this._wasOnline = isConnected
+      this.props.store.dispatch({
+        type: isConnected ? ONLINE : OFFLINE
+      })
+    }
   }
 })
 
