@@ -22,7 +22,7 @@ ReactDOM.render(
 
 ## React Native
 
-You can use `redux-queue-offline-listener/native` to use React Native [NetInfo](https://facebook.github.io/react-native/docs/netinfo.html)
+You can use `redux-queue-offline-listener/lib/native` to use React Native [NetInfo](https://facebook.github.io/react-native/docs/netinfo.html)
 
 ```js
 import NetworkListener from 'redux-queue-offline-listener/native';
